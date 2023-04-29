@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <div class="title">
+    DIVERSITY IN TECH
+  </div>
+<div id="myChart" style="width:100%; max-width:900px; height:800px; border: black solid 1px; border-radius: 10px;">
+  
+</div>
+
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Race/Ethnicity', 'Percent'],
+  ['White',62],
+  ['African American',7],
+  ['Hispanic',8],
+  ['Asian',20],
+  ['Mix',3],
+//   ['Other',14.5]
+]);
+
+var options = {
+  // title:'Minorities in Tech',
+  is3D:true,
+  colors: ['#2a9d8f', '#e9c46a', '#f4a261', '#e76f51', '#264653'],
+  background: '#adc178',
+  
+
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}
+</script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Basics</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<body>
+    <div>
+        DIVERSITY IN HIGH TECH
+    </div>
+<div
+
+id="myChart" >
+</div>
+
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Race/Ethnicity', 'Percent'],
+  ['White',62],
+
+  ['African American',7],
+  ['Hispanic',8],
+  ['Asian',20],
+//   ['Mix',23.9],
+//   ['Other',14.5]
+]);
+
+var options = {
+  title:'Minorities in Tech',
+  is3D:true
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}
+</script>
+
+</body>
+</html> -->
